@@ -1,0 +1,89 @@
+:root {
+	--menu-width            : 200px;
+	--menu-background       : #c7c7c7;
+	--menu-hover-background : #999;
+}
+
+#context-menu {
+	position         : fixed;
+	z-index          : 9999999999999;
+	border-radius    : 5px;
+	transform        : scale(0);
+	transform-origin : top left;
+	display          : inline-block;
+}
+
+#context-menu.visible {
+	transform  : scale(1);
+	transition : transform 150ms ease-in-out;
+}
+
+#context-menu ul {
+	float         : left;
+	width         : var(--menu-width);
+	background    : #f1f1f1;
+	border        : 1px solid #00000040;
+	border-radius : 4px;
+	margin: 0;padding: 0;}
+
+#context-menu ul li ul {
+	display          : none;
+	position         : relative;
+	transform        : scale(0);
+	transform-origin : top left;
+}
+
+#context-menu ul li.menu-item-has-children:after {
+	content           : '';
+	width             : 10px;
+	height            : 10px;
+	/* background: #ff0000; */
+	position          : absolute;
+	right             : 10px;
+	top               : 13px;
+	border            : solid black;
+	border-width      : 0 3px 3px 0;
+	display           : inline-block;
+	padding           : 3px;
+	transform         : rotate(-45deg);
+	-webkit-transform : rotate(-45deg);
+}
+
+#context-menu ul li {
+	float         : left;
+	width         : 100%;
+	position      : relative;
+	cursor        : pointer;
+	border-bottom : 1px solid #00000040;
+	list-style: none;margin: 0;padding: 0 !important;}
+
+#context-menu ul li:last-child {
+	border-bottom : none;
+}
+
+#context-menu ul li a {
+	float   : left;
+	width   : 100%;
+	padding : 10px 20px 10px 10px;
+	color   : #000;
+}
+
+#context-menu > ul li:hover > a {
+	background : #dfdfdf;
+}
+
+#context-menu > ul li:hover > ul {
+	display    : block;
+	position   : absolute;
+	right      : calc(var(--menu-width) * -1);
+	top        : -1px;
+	transform  : scale(1);
+	transition : transform 150ms ease-in-out;
+}
+
+#context-menu ul li ul li {
+}
+
+#context-menu ul li ul li a:hover {
+	background : var(--menu-hover-background);
+}
