@@ -1,4 +1,4 @@
-=== Right Click Menu (Like hayatikodla.com) ===
+=== Right Click Menu (Like hayatikodla.net) ===
 Contributors: hasanyuksektepe
 Donate link: https://hayatikodla.net/hasan-yuksektepe-kimdir/
 Tags: right click, right click menu, right click disable
