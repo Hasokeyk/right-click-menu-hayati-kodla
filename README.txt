@@ -13,6 +13,8 @@ When users coming to your website with this wordpress plugin right click, they w
 
 == Description ==
 
+DEMO : https://hayatikodla.net
+
 When users coming to your website with this wordpress plugin right click, they will be greeted with a special menu for your website.
 
 After installing the plugin, a menu location named "Right Click Menu" will appear on the "Apperance/Menus/Manage Locations" page.
